@@ -5,7 +5,12 @@ export interface AboutAboutStat extends Struct.ComponentSchema {
   info: {
     displayName: 'about-stat';
   };
-  attributes: {};
+  attributes: {
+    subTextDown: Schema.Attribute.String;
+    subTextUp: Schema.Attribute.String;
+    textprefix: Schema.Attribute.String;
+    textSuffix: Schema.Attribute.String;
+  };
 }
 
 export interface AboutCultureSection extends Struct.ComponentSchema {
@@ -13,7 +18,15 @@ export interface AboutCultureSection extends Struct.ComponentSchema {
   info: {
     displayName: 'culture-section';
   };
-  attributes: {};
+  attributes: {
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    subtitle: Schema.Attribute.String;
+    titleDark: Schema.Attribute.String;
+    titleLight: Schema.Attribute.String;
+  };
 }
 
 export interface AboutFounderSection extends Struct.ComponentSchema {
@@ -21,7 +34,16 @@ export interface AboutFounderSection extends Struct.ComponentSchema {
   info: {
     displayName: 'founder-section';
   };
-  attributes: {};
+  attributes: {
+    designation: Schema.Attribute.String;
+    headlineBold: Schema.Attribute.String;
+    headlineLight: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    profileLink: Schema.Attribute.String;
+    shortBio: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface AboutGlobalImpact extends Struct.ComponentSchema {
@@ -29,7 +51,15 @@ export interface AboutGlobalImpact extends Struct.ComponentSchema {
   info: {
     displayName: 'global-impact';
   };
-  attributes: {};
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'about.about-stat', true>;
+    titleDown: Schema.Attribute.String;
+    titleUp: Schema.Attribute.String;
+  };
 }
 
 export interface AboutHeroSection extends Struct.ComponentSchema {
@@ -37,7 +67,17 @@ export interface AboutHeroSection extends Struct.ComponentSchema {
   info: {
     displayName: 'hero-section';
   };
-  attributes: {};
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    badgeText: Schema.Attribute.String;
+    primaryButton: Schema.Attribute.Component<'shared.button', false>;
+    secondaryButton: Schema.Attribute.Component<'shared.button', false>;
+    subTitle: Schema.Attribute.Text;
+    titleDown: Schema.Attribute.Text;
+    titleUp: Schema.Attribute.Text;
+  };
 }
 
 export interface AboutStoryHighlight extends Struct.ComponentSchema {
@@ -45,7 +85,10 @@ export interface AboutStoryHighlight extends Struct.ComponentSchema {
   info: {
     displayName: 'story-highlight';
   };
-  attributes: {};
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    label: Schema.Attribute.String;
+  };
 }
 
 export interface AboutStorySection extends Struct.ComponentSchema {
@@ -53,7 +96,15 @@ export interface AboutStorySection extends Struct.ComponentSchema {
   info: {
     displayName: 'story-section';
   };
-  attributes: {};
+  attributes: {
+    darkText: Schema.Attribute.Text;
+    eyebrowLabel: Schema.Attribute.String;
+    highlightedText: Schema.Attribute.Text;
+    leftHighlight: Schema.Attribute.Component<'about.story-highlight', false>;
+    lightText: Schema.Attribute.Text;
+    milestones: Schema.Attribute.Component<'about.timeline-item', true>;
+    rightHighlight: Schema.Attribute.Component<'about.story-highlight', false>;
+  };
 }
 
 export interface AboutTimelineItem extends Struct.ComponentSchema {
@@ -61,7 +112,12 @@ export interface AboutTimelineItem extends Struct.ComponentSchema {
   info: {
     displayName: 'timeline-item';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text;
+    isActive: Schema.Attribute.Boolean;
+    title: Schema.Attribute.String;
+    year: Schema.Attribute.String;
+  };
 }
 
 export interface FooterSectionFooter extends Struct.ComponentSchema {
@@ -77,7 +133,13 @@ export interface FooterSectionFooterBase extends Struct.ComponentSchema {
   info: {
     displayName: 'footerBase';
   };
-  attributes: {};
+  attributes: {
+    copyrightText: Schema.Attribute.String;
+    copyrightYear: Schema.Attribute.String;
+    footerLogoLarge: Schema.Attribute.Media<'images' | 'files'>;
+    footerLogoSmall: Schema.Attribute.Media<'images' | 'files'>;
+    links: Schema.Attribute.Component<'shared.labels', true>;
+  };
 }
 
 export interface FooterSectionFooterExpand extends Struct.ComponentSchema {
@@ -85,7 +147,10 @@ export interface FooterSectionFooterExpand extends Struct.ComponentSchema {
   info: {
     displayName: 'footerExpand';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.button', false>;
+    linkGroups: Schema.Attribute.Component<'shared.link-groups', true>;
+  };
 }
 
 export interface FooterSectionFooterHead extends Struct.ComponentSchema {
@@ -93,7 +158,15 @@ export interface FooterSectionFooterHead extends Struct.ComponentSchema {
   info: {
     displayName: 'footerHead';
   };
-  attributes: {};
+  attributes: {
+    footerShowReel: Schema.Attribute.Media<'images' | 'files'>;
+    Heading: Schema.Attribute.String;
+    headingLite: Schema.Attribute.String;
+    social_links: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::social-link.social-link'
+    >;
+  };
 }
 
 export interface FooterSectionFooterQuickLinks extends Struct.ComponentSchema {
@@ -101,7 +174,13 @@ export interface FooterSectionFooterQuickLinks extends Struct.ComponentSchema {
   info: {
     displayName: 'footerQuickLinks';
   };
-  attributes: {};
+  attributes: {
+    label: Schema.Attribute.String;
+    navigation_items: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navigation-item.navigation-item'
+    >;
+  };
 }
 
 export interface HomePageSectionsBenefitsCards extends Struct.ComponentSchema {
@@ -109,7 +188,12 @@ export interface HomePageSectionsBenefitsCards extends Struct.ComponentSchema {
   info: {
     displayName: 'benefits-cards';
   };
-  attributes: {};
+  attributes: {
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    subHeading: Schema.Attribute.String;
+  };
 }
 
 export interface HomePageSectionsBenefitsSection
@@ -118,7 +202,17 @@ export interface HomePageSectionsBenefitsSection
   info: {
     displayName: 'benefits-section';
   };
-  attributes: {};
+  attributes: {
+    benefits: Schema.Attribute.Component<
+      'home-page-sections.benefits-cards',
+      true
+    >;
+    button: Schema.Attribute.Component<'shared.button', false>;
+    headingBold: Schema.Attribute.String;
+    headingDown: Schema.Attribute.String;
+    headingLite: Schema.Attribute.String;
+    headingUp: Schema.Attribute.String;
+  };
 }
 
 export interface HomePageSectionsBlogPreview extends Struct.ComponentSchema {
@@ -126,7 +220,15 @@ export interface HomePageSectionsBlogPreview extends Struct.ComponentSchema {
   info: {
     displayName: 'blog-preview';
   };
-  attributes: {};
+  attributes: {
+    blog_posts: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-post.blog-post'
+    >;
+    button: Schema.Attribute.Component<'shared.button', false>;
+    heading: Schema.Attribute.Text;
+    subheading: Schema.Attribute.Text;
+  };
 }
 
 export interface HomePageSectionsCaseStudiesShowcase
@@ -135,7 +237,16 @@ export interface HomePageSectionsCaseStudiesShowcase
   info: {
     displayName: 'case-studies-showcase';
   };
-  attributes: {};
+  attributes: {
+    boldHeading: Schema.Attribute.String;
+    featured_case_studies: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-study.case-study'
+    >;
+    heading: Schema.Attribute.String;
+    subheading: Schema.Attribute.String;
+    viewAllButton: Schema.Attribute.Component<'shared.button', false>;
+  };
 }
 
 export interface HomePageSectionsCasestudyInfo extends Struct.ComponentSchema {
@@ -143,7 +254,13 @@ export interface HomePageSectionsCasestudyInfo extends Struct.ComponentSchema {
   info: {
     displayName: 'casestudy-info';
   };
-  attributes: {};
+  attributes: {
+    caseStudyInfoItem: Schema.Attribute.Component<
+      'home-page-sections.infovalue-item',
+      true
+    >;
+    type: Schema.Attribute.Enumeration<['stat values', 'description']>;
+  };
 }
 
 export interface HomePageSectionsContactForm extends Struct.ComponentSchema {
@@ -151,7 +268,13 @@ export interface HomePageSectionsContactForm extends Struct.ComponentSchema {
   info: {
     displayName: 'contact-form';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.button', false>;
+    circularText: Schema.Attribute.String;
+    contactInfo: Schema.Attribute.Component<'shared.contact-info', false>;
+    label: Schema.Attribute.Text & Schema.Attribute.Required;
+    mainHeading: Schema.Attribute.String;
+  };
 }
 
 export interface HomePageSectionsFaqList extends Struct.ComponentSchema {
@@ -159,7 +282,12 @@ export interface HomePageSectionsFaqList extends Struct.ComponentSchema {
   info: {
     displayName: 'faq-list';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.button', false>;
+    faqs: Schema.Attribute.Relation<'oneToMany', 'api::qna.qna'>;
+    heading: Schema.Attribute.String;
+    headingLite: Schema.Attribute.String;
+  };
 }
 
 export interface HomePageSectionsHeroSection extends Struct.ComponentSchema {
@@ -167,7 +295,21 @@ export interface HomePageSectionsHeroSection extends Struct.ComponentSchema {
   info: {
     displayName: 'hero-section';
   };
-  attributes: {};
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    buttons: Schema.Attribute.Component<'shared.button', true>;
+    haloImageDown: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    haloImageUpper: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    headline: Schema.Attribute.Text;
+    MainItemImage: Schema.Attribute.Media<'images' | 'files'>;
+    subheadline: Schema.Attribute.Text;
+  };
 }
 
 export interface HomePageSectionsInfovalueItem extends Struct.ComponentSchema {
@@ -175,7 +317,10 @@ export interface HomePageSectionsInfovalueItem extends Struct.ComponentSchema {
   info: {
     displayName: 'infovalue-item';
   };
-  attributes: {};
+  attributes: {
+    heading: Schema.Attribute.String;
+    subHeading: Schema.Attribute.String;
+  };
 }
 
 export interface HomePageSectionsMarqueeItem extends Struct.ComponentSchema {
@@ -183,7 +328,10 @@ export interface HomePageSectionsMarqueeItem extends Struct.ComponentSchema {
   info: {
     displayName: 'marquee-Item';
   };
-  attributes: {};
+  attributes: {
+    label: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
 }
 
 export interface HomePageSectionsServicesGrid extends Struct.ComponentSchema {
@@ -191,7 +339,12 @@ export interface HomePageSectionsServicesGrid extends Struct.ComponentSchema {
   info: {
     displayName: 'services-grid';
   };
-  attributes: {};
+  attributes: {
+    heading: Schema.Attribute.String;
+    headingBold: Schema.Attribute.String & Schema.Attribute.Required;
+    serviceCard: Schema.Attribute.Component<'shared.service-card', true>;
+    subheading: Schema.Attribute.String;
+  };
 }
 
 export interface HomePageSectionsStatsSection extends Struct.ComponentSchema {
@@ -199,7 +352,13 @@ export interface HomePageSectionsStatsSection extends Struct.ComponentSchema {
   info: {
     displayName: 'stats-section';
   };
-  attributes: {};
+  attributes: {
+    buttons: Schema.Attribute.Component<'shared.button', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    headingLite: Schema.Attribute.String;
+    stats: Schema.Attribute.Component<'shared.stat-card', true>;
+  };
 }
 
 export interface ServicesBottomHero extends Struct.ComponentSchema {
@@ -207,7 +366,16 @@ export interface ServicesBottomHero extends Struct.ComponentSchema {
   info: {
     displayName: 'bottomHero';
   };
-  attributes: {};
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.Text;
+    headingBottom: Schema.Attribute.String;
+    headingTop: Schema.Attribute.String;
+    primaryButton: Schema.Attribute.Component<'shared.button', false>;
+    secondaryButton: Schema.Attribute.Component<'shared.button', false>;
+  };
 }
 
 export interface ServicesCategoryHighlight extends Struct.ComponentSchema {
@@ -215,7 +383,11 @@ export interface ServicesCategoryHighlight extends Struct.ComponentSchema {
   info: {
     displayName: 'category-highlight';
   };
-  attributes: {};
+  attributes: {
+    heading: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subHeading: Schema.Attribute.String;
+  };
 }
 
 export interface ServicesHeroSection extends Struct.ComponentSchema {
@@ -223,7 +395,16 @@ export interface ServicesHeroSection extends Struct.ComponentSchema {
   info: {
     displayName: 'hero-section';
   };
-  attributes: {};
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    badgeText: Schema.Attribute.String;
+    primaryButton: Schema.Attribute.Component<'shared.button', false>;
+    secondaryButton: Schema.Attribute.Component<'shared.button', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface ServicesImpactSection extends Struct.ComponentSchema {
@@ -231,7 +412,10 @@ export interface ServicesImpactSection extends Struct.ComponentSchema {
   info: {
     displayName: 'impactSection';
   };
-  attributes: {};
+  attributes: {
+    eyebrowText: Schema.Attribute.String;
+    impactStats: Schema.Attribute.Component<'services.impact-stat', true>;
+  };
 }
 
 export interface ServicesImpactStat extends Struct.ComponentSchema {
@@ -239,7 +423,13 @@ export interface ServicesImpactStat extends Struct.ComponentSchema {
   info: {
     displayName: 'impactStat';
   };
-  attributes: {};
+  attributes: {
+    darkText: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    lightText: Schema.Attribute.String;
+    textPrefix: Schema.Attribute.String;
+    textSuffix: Schema.Attribute.String;
+  };
 }
 
 export interface ServicesServiceCategory extends Struct.ComponentSchema {
@@ -247,7 +437,14 @@ export interface ServicesServiceCategory extends Struct.ComponentSchema {
   info: {
     displayName: 'ServiceCategory';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text;
+    highlights: Schema.Attribute.Component<'services.category-highlight', true>;
+    label: Schema.Attribute.String;
+    layout: Schema.Attribute.Enumeration<['left', 'right']>;
+    services: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface SharedButton extends Struct.ComponentSchema {
@@ -255,7 +452,11 @@ export interface SharedButton extends Struct.ComponentSchema {
   info: {
     displayName: 'button';
   };
-  attributes: {};
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    style: Schema.Attribute.Enumeration<['primary', 'secondary', 'outline']>;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
 }
 
 export interface SharedCaseStudyCard extends Struct.ComponentSchema {
@@ -263,7 +464,24 @@ export interface SharedCaseStudyCard extends Struct.ComponentSchema {
   info: {
     displayName: 'case-study-card';
   };
-  attributes: {};
+  attributes: {
+    cta: Schema.Attribute.Component<'shared.button', false>;
+    leftSectionHeading: Schema.Attribute.Text;
+    leftSectionImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    lineTitleDown: Schema.Attribute.String;
+    lineTitleUp: Schema.Attribute.String;
+    mainHeading: Schema.Attribute.String;
+    rightInfoSection: Schema.Attribute.Component<
+      'home-page-sections.casestudy-info',
+      false
+    >;
+    rightSectionCoverImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    tag: Schema.Attribute.Relation<'oneToOne', 'api::tag.tag'>;
+  };
 }
 
 export interface SharedContactInfo extends Struct.ComponentSchema {
@@ -271,7 +489,11 @@ export interface SharedContactInfo extends Struct.ComponentSchema {
   info: {
     displayName: 'contact-info';
   };
-  attributes: {};
+  attributes: {
+    address: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
+    phone: Schema.Attribute.String;
+  };
 }
 
 export interface SharedFaqItem extends Struct.ComponentSchema {
@@ -279,7 +501,10 @@ export interface SharedFaqItem extends Struct.ComponentSchema {
   info: {
     displayName: 'faq-item';
   };
-  attributes: {};
+  attributes: {
+    answer: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
 }
 
 export interface SharedFooter extends Struct.ComponentSchema {
@@ -287,7 +512,10 @@ export interface SharedFooter extends Struct.ComponentSchema {
   info: {
     displayName: 'footer';
   };
-  attributes: {};
+  attributes: {
+    copyrightText: Schema.Attribute.Text;
+    links: Schema.Attribute.Component<'shared.labels', true>;
+  };
 }
 
 export interface SharedLabels extends Struct.ComponentSchema {
@@ -295,7 +523,10 @@ export interface SharedLabels extends Struct.ComponentSchema {
   info: {
     displayName: 'labels';
   };
-  attributes: {};
+  attributes: {
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.Text;
+  };
 }
 
 export interface SharedLinkGroups extends Struct.ComponentSchema {
@@ -303,7 +534,13 @@ export interface SharedLinkGroups extends Struct.ComponentSchema {
   info: {
     displayName: 'linkGroups';
   };
-  attributes: {};
+  attributes: {
+    footer_links: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer-link.footer-link'
+    >;
+    name: Schema.Attribute.String;
+  };
 }
 
 export interface SharedOpenGraph extends Struct.ComponentSchema {
@@ -311,7 +548,25 @@ export interface SharedOpenGraph extends Struct.ComponentSchema {
   info: {
     displayName: 'open-graph';
   };
-  attributes: {};
+  attributes: {
+    ogDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    ogImage: Schema.Attribute.Media<'images' | 'files'>;
+    ogSiteName: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Your website/brand name'>;
+    ogTitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    ogType: Schema.Attribute.Enumeration<
+      ['website', 'article', 'product', 'video ', 'book']
+    > &
+      Schema.Attribute.DefaultTo<'website'>;
+    ogUrl: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'The canonical URL of the page'>;
+  };
 }
 
 export interface SharedSeo extends Struct.ComponentSchema {
@@ -319,7 +574,35 @@ export interface SharedSeo extends Struct.ComponentSchema {
   info: {
     displayName: 'seo';
   };
-  attributes: {};
+  attributes: {
+    canonicalURL: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Override default canonical URL if needed'>;
+    Keywords: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Focus keywords (comma-separated)'>;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 120;
+      }> &
+      Schema.Attribute.DefaultTo<'SEO meta description (150-160 characters optimal)'>;
+    metaRobots: Schema.Attribute.Enumeration<
+      [
+        'index, follow',
+        'noindex, follow',
+        'index, nofollow',
+        'noindex, nofollow',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'index, follow'>;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }> &
+      Schema.Attribute.DefaultTo<'"SEO title tag (50-60 characters optimal)"'>;
+    openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
+    structuredData: Schema.Attribute.JSON;
+  };
 }
 
 export interface SharedServiceCard extends Struct.ComponentSchema {
@@ -327,7 +610,12 @@ export interface SharedServiceCard extends Struct.ComponentSchema {
   info: {
     displayName: 'service-card';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.button', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
 }
 
 export interface SharedSocialMedia extends Struct.ComponentSchema {
@@ -335,7 +623,10 @@ export interface SharedSocialMedia extends Struct.ComponentSchema {
   info: {
     displayName: 'socialMedia';
   };
-  attributes: {};
+  attributes: {
+    platform: Schema.Attribute.Enumeration<['facebook', 'twitter', 'linkedin']>;
+    url: Schema.Attribute.Text;
+  };
 }
 
 export interface SharedStatCard extends Struct.ComponentSchema {
@@ -343,7 +634,12 @@ export interface SharedStatCard extends Struct.ComponentSchema {
   info: {
     displayName: 'stat-card';
   };
-  attributes: {};
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    subLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    valuePrefix: Schema.Attribute.String & Schema.Attribute.Required;
+    valueSuffix: Schema.Attribute.String;
+  };
 }
 
 export interface SharedTextTags extends Struct.ComponentSchema {
@@ -351,7 +647,9 @@ export interface SharedTextTags extends Struct.ComponentSchema {
   info: {
     displayName: 'textTags';
   };
-  attributes: {};
+  attributes: {
+    tags: Schema.Attribute.Text;
+  };
 }
 
 declare module '@strapi/strapi' {

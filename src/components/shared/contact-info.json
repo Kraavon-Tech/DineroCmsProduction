@@ -4,6 +4,16 @@
     "displayName": "contact-info"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

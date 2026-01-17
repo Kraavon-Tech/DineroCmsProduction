@@ -4,6 +4,54 @@
     "displayName": "case-study-card"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "mainHeading": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag.tag"
+    },
+    "lineTitleUp": {
+      "type": "string"
+    },
+    "lineTitleDown": {
+      "type": "string"
+    },
+    "leftSectionHeading": {
+      "type": "text"
+    },
+    "leftSectionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rightSectionCoverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rightInfoSection": {
+      "type": "component",
+      "component": "home-page-sections.casestudy-info",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

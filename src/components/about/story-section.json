@@ -4,6 +4,34 @@
     "displayName": "story-section"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "eyebrowLabel": {
+      "type": "string"
+    },
+    "highlightedText": {
+      "type": "text"
+    },
+    "lightText": {
+      "type": "text"
+    },
+    "darkText": {
+      "type": "text"
+    },
+    "leftHighlight": {
+      "type": "component",
+      "component": "about.story-highlight",
+      "repeatable": false
+    },
+    "rightHighlight": {
+      "type": "component",
+      "component": "about.story-highlight",
+      "repeatable": false
+    },
+    "milestones": {
+      "type": "component",
+      "component": "about.timeline-item",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

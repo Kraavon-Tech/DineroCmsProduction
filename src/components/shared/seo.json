@@ -4,6 +4,45 @@
     "displayName": "seo"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "default": "\"SEO title tag (50-60 characters optimal)\"",
+      "maxLength": 60,
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "default": "SEO meta description (150-160 characters optimal)",
+      "minLength": 120,
+      "required": true
+    },
+    "Keywords": {
+      "type": "text",
+      "default": "Focus keywords (comma-separated)"
+    },
+    "canonicalURL": {
+      "type": "string",
+      "default": "Override default canonical URL if needed"
+    },
+    "metaRobots": {
+      "type": "enumeration",
+      "default": "index, follow",
+      "enum": [
+        "index, follow",
+        "noindex, follow",
+        "index, nofollow",
+        "noindex, nofollow"
+      ]
+    },
+    "structuredData": {
+      "type": "json"
+    },
+    "openGraph": {
+      "type": "component",
+      "component": "shared.open-graph",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

@@ -4,6 +4,42 @@
     "displayName": "open-graph"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "ogTitle": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "ogDescription": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "ogType": {
+      "type": "enumeration",
+      "default": "website",
+      "enum": [
+        "website",
+        "article",
+        "product",
+        "video ",
+        "book"
+      ]
+    },
+    "ogUrl": {
+      "type": "string",
+      "default": "The canonical URL of the page"
+    },
+    "ogSiteName": {
+      "type": "string",
+      "default": "Your website/brand name"
+    }
+  },
   "config": {}
 }

@@ -4,6 +4,15 @@
     "displayName": "faq-item"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "blocks",
+      "required": true
+    }
+  },
   "config": {}
 }

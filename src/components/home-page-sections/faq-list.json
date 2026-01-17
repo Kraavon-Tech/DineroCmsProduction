@@ -4,6 +4,23 @@
     "displayName": "faq-list"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "headingLite": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::qna.qna"
+    }
+  },
   "config": {}
 }

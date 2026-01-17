@@ -4,6 +4,19 @@
     "displayName": "casestudy-info"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "stat values",
+        "description"
+      ]
+    },
+    "caseStudyInfoItem": {
+      "type": "component",
+      "component": "home-page-sections.infovalue-item",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

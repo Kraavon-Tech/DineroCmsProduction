@@ -10,5 +10,31 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "services.hero-section",
+      "repeatable": false
+    },
+    "impactStats": {
+      "type": "component",
+      "component": "services.impact-section",
+      "repeatable": false
+    },
+    "categories": {
+      "type": "component",
+      "component": "services.service-category",
+      "repeatable": true
+    },
+    "finalHero": {
+      "type": "component",
+      "component": "services.bottom-hero",
+      "repeatable": false
+    }
+  }
 }

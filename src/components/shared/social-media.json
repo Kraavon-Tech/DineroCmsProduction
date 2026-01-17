@@ -4,6 +4,18 @@
     "displayName": "socialMedia"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "twitter",
+        "linkedin"
+      ]
+    },
+    "url": {
+      "type": "text"
+    }
+  },
   "config": {}
 }

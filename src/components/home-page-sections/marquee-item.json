@@ -4,6 +4,20 @@
     "displayName": "marquee-Item"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "label": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

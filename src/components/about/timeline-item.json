@@ -4,6 +4,19 @@
     "displayName": "timeline-item"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "isActive": {
+      "type": "boolean"
+    }
+  },
   "config": {}
 }

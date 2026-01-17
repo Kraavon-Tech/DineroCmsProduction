@@ -10,5 +10,41 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "about.hero-section",
+      "repeatable": false
+    },
+    "globalImpact": {
+      "type": "component",
+      "component": "about.global-impact",
+      "repeatable": false
+    },
+    "story": {
+      "type": "component",
+      "component": "about.story-section",
+      "repeatable": false
+    },
+    "founder": {
+      "type": "component",
+      "component": "about.founder-section",
+      "repeatable": false
+    },
+    "culture": {
+      "type": "component",
+      "component": "about.culture-section",
+      "repeatable": false
+    },
+    "bottomHero": {
+      "type": "component",
+      "component": "services.bottom-hero",
+      "repeatable": false
+    }
+  }
 }

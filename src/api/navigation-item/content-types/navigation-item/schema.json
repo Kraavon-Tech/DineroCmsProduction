@@ -10,5 +10,15 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
 }

@@ -4,6 +4,34 @@
     "displayName": "footerBase"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "copyrightText": {
+      "type": "string"
+    },
+    "copyrightYear": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "component": "shared.labels",
+      "repeatable": true
+    },
+    "footerLogoSmall": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "footerLogoLarge": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
   "config": {}
 }

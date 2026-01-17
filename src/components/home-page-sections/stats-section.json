@@ -4,6 +4,26 @@
     "displayName": "stats-section"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "headingLite": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.stat-card",
+      "repeatable": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

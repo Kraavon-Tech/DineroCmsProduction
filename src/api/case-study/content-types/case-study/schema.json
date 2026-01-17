@@ -10,5 +10,43 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "client": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "component",
+      "component": "shared.case-study-card",
+      "repeatable": false
+    },
+    "fullContent": {
+      "type": "blocks"
+    },
+    "results": {
+      "type": "component",
+      "component": "shared.stat-card",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
 }

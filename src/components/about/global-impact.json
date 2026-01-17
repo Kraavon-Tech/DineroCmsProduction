@@ -4,6 +4,31 @@
     "displayName": "global-impact"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "titleUp": {
+      "type": "string"
+    },
+    "titleDown": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "component": "about.about-stat",
+      "repeatable": true
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
   "config": {}
 }

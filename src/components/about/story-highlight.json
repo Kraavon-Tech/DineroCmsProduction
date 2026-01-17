@@ -4,6 +4,20 @@
     "displayName": "story-highlight"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "label": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

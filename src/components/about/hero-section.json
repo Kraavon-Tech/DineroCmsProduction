@@ -4,6 +4,39 @@
     "displayName": "hero-section"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "titleUp": {
+      "type": "text"
+    },
+    "titleDown": {
+      "type": "text"
+    },
+    "subTitle": {
+      "type": "text"
+    },
+    "primaryButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "secondaryButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
   "config": {}
 }

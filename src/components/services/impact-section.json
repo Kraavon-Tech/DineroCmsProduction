@@ -4,6 +4,15 @@
     "displayName": "impactSection"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "eyebrowText": {
+      "type": "string"
+    },
+    "impactStats": {
+      "type": "component",
+      "component": "services.impact-stat",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

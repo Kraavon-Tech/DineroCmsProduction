@@ -4,6 +4,26 @@
     "displayName": "case-studies-showcase"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "boldHeading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "featured_case_studies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-study.case-study"
+    },
+    "viewAllButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

@@ -4,6 +4,26 @@
     "displayName": "footerHead"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "footerShowReel": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Heading": {
+      "type": "string"
+    },
+    "headingLite": {
+      "type": "string"
+    },
+    "social_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social-link.social-link"
+    }
+  },
   "config": {}
 }

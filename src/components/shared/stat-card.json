@@ -4,6 +4,22 @@
     "displayName": "stat-card"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "valuePrefix": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "subLabel": {
+      "type": "string",
+      "required": true
+    },
+    "valueSuffix": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

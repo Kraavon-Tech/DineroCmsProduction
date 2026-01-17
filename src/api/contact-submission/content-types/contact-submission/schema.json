@@ -10,5 +10,38 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "contactStatus": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "read",
+        "replied",
+        "archived"
+      ]
+    },
+    "ipAddress": {
+      "type": "string"
+    },
+    "userAgent": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    }
+  }
 }

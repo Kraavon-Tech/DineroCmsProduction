@@ -4,6 +4,19 @@
     "displayName": "about-stat"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "textprefix": {
+      "type": "string"
+    },
+    "textSuffix": {
+      "type": "string"
+    },
+    "subTextUp": {
+      "type": "string"
+    },
+    "subTextDown": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

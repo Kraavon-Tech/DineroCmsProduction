@@ -4,6 +4,13 @@
     "displayName": "infovalue-item"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

@@ -10,5 +10,29 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "FooterHeader": {
+      "type": "component",
+      "component": "footer-section.footer-head",
+      "repeatable": false
+    },
+    "FooterQuickLinks": {
+      "type": "component",
+      "component": "footer-section.footer-quick-links",
+      "repeatable": false
+    },
+    "FooterLinkGroups": {
+      "type": "component",
+      "component": "footer-section.footer-expand",
+      "repeatable": false
+    },
+    "FooterBase": {
+      "type": "component",
+      "component": "footer-section.footer-base",
+      "repeatable": false
+    },
+    "footerMarquee": {
+      "type": "text"
+    }
+  }
 }

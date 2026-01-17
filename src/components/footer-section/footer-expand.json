@@ -4,6 +4,17 @@
     "displayName": "footerExpand"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "linkGroups": {
+      "type": "component",
+      "component": "shared.link-groups",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

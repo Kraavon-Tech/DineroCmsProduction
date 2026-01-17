@@ -4,6 +4,22 @@
     "displayName": "services-grid"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "headingBold": {
+      "type": "string",
+      "required": true
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "serviceCard": {
+      "type": "component",
+      "component": "shared.service-card",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

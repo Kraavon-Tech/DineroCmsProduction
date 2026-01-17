@@ -4,6 +4,26 @@
     "displayName": "culture-section"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "titleLight": {
+      "type": "string"
+    },
+    "titleDark": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
   "config": {}
 }

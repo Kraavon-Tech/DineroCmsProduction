@@ -4,6 +4,15 @@
     "displayName": "footerQuickLinks"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "navigation_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::navigation-item.navigation-item"
+    }
+  },
   "config": {}
 }

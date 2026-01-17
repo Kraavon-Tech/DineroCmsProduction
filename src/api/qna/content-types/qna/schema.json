@@ -10,5 +10,21 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "Question": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Question"
+    },
+    "Answer": {
+      "type": "richtext"
+    },
+    "featured": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  }
 }

@@ -4,6 +4,29 @@
     "displayName": "benefits-section"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "headingLite": {
+      "type": "string"
+    },
+    "headingUp": {
+      "type": "string"
+    },
+    "headingDown": {
+      "type": "string"
+    },
+    "headingBold": {
+      "type": "string"
+    },
+    "benefits": {
+      "type": "component",
+      "component": "home-page-sections.benefits-cards",
+      "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

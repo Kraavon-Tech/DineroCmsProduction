@@ -10,5 +10,54 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "component": "home-page-sections.hero-section",
+      "repeatable": false
+    },
+    "MarqueeItems": {
+      "type": "component",
+      "component": "home-page-sections.marquee-item",
+      "repeatable": true
+    },
+    "TrustIndicators": {
+      "type": "component",
+      "component": "home-page-sections.stats-section",
+      "repeatable": false
+    },
+    "ServicesSection": {
+      "type": "component",
+      "component": "home-page-sections.services-grid",
+      "repeatable": false
+    },
+    "CaseStudiesSection": {
+      "type": "component",
+      "component": "home-page-sections.case-studies-showcase",
+      "repeatable": false
+    },
+    "WhyChoseUs": {
+      "type": "component",
+      "component": "home-page-sections.benefits-section",
+      "repeatable": false
+    },
+    "FAQs": {
+      "type": "component",
+      "component": "home-page-sections.faq-list",
+      "repeatable": false
+    },
+    "Blogs": {
+      "type": "component",
+      "component": "home-page-sections.blog-preview",
+      "repeatable": false
+    },
+    "Contacts": {
+      "type": "component",
+      "component": "home-page-sections.contact-form",
+      "repeatable": false
+    },
+    "MarqueeBottom": {
+      "type": "text"
+    }
+  }
 }

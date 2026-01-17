@@ -4,6 +4,15 @@
     "displayName": "linkGroups"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "footer_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::footer-link.footer-link"
+    }
+  },
   "config": {}
 }

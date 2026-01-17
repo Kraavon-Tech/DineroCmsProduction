@@ -4,6 +4,15 @@
     "displayName": "footer"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "copyrightText": {
+      "type": "text"
+    },
+    "links": {
+      "type": "component",
+      "component": "shared.labels",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

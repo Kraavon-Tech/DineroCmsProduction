@@ -4,6 +4,10 @@
     "displayName": "textTags"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "tags": {
+      "type": "text"
+    }
+  },
   "config": {}
 }

@@ -4,6 +4,27 @@
     "displayName": "contact-form"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "label": {
+      "type": "text",
+      "required": true
+    },
+    "mainHeading": {
+      "type": "string"
+    },
+    "contactInfo": {
+      "type": "component",
+      "component": "shared.contact-info",
+      "repeatable": false
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "circularText": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

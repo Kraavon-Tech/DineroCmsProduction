@@ -4,6 +4,38 @@
     "displayName": "founder-section"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "headlineLight": {
+      "type": "text"
+    },
+    "headlineBold": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "shortBio": {
+      "type": "text"
+    },
+    "profileLink": {
+      "type": "string"
+    }
+  },
   "config": {}
 }
