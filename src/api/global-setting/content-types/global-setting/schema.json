@@ -48,6 +48,11 @@
       "type": "component",
       "component": "shared.labels",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
